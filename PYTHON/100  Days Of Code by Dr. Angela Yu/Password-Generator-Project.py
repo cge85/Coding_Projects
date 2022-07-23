@@ -24,3 +24,4 @@ for char in range(0, nr_symbols):
 
 scramble_password = "".join(random.sample(password, len(password)))
 print(scramble_password)
+
