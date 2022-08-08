@@ -1,5 +1,5 @@
-    for position in range(len(chosen_word)):
-            letter = chosen_word[position]
-            # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-            if letter == guess:
-                display[p
+
+# for name in auction_dict:
+#     bids = auction_dict[name]
+#     if bids[name] < bids[name]:
+#         print(f"The winner is {name} with a bid of ${bid}" )
