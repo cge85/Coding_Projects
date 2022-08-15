@@ -16,7 +16,6 @@ def play():
     # r > s, s > p, p > r
     if is_winner(user, computer):
         return 'You won!'
-
     return 'you lose!'
 
 
