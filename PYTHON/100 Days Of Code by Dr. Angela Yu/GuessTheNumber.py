@@ -5,12 +5,13 @@ import os
 def clear(): return os.system('cls')
 
 def play_guessing_game():
+    """Play the game and have fun"""
     print(logo)
 
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking about a number between 1 and 100.")
     random_guessed_number = random.choice(range(1,101))
-    print(f"Pssst, the correct answer is {random_guessed_number}")
+    # print(f"Pssst, the correct answer is {random_guessed_number}")
 
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
     if difficulty == "easy":
