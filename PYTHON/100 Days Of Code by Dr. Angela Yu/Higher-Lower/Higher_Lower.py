@@ -5,8 +5,6 @@ import os
 
 def clear(): return os.system("cls")
 
-
-
 def game():
     def random_choice_data():
         return random.choice(data)
@@ -30,7 +28,6 @@ def game():
 
         followers_a = user_a["follower_count"]
         followers_b = user_b["follower_count"]
-
 
         print(f"Compare A: {random_info(user_a)}")
         print(vs)
