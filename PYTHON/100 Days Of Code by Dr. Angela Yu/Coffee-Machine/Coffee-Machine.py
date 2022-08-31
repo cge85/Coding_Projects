@@ -96,7 +96,7 @@ while power_on:
         else:
             print("Sorry not enough water.")
             continue
-        
+
         print("Please insert coins.")
         quaters = float(input("how many quaters?: "))
         user_insert_coins += quaters * 0.25
