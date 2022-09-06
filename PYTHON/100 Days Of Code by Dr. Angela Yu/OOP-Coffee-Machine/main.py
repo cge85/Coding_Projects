@@ -2,21 +2,21 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
-coffee_machine_on = True
+coffe_machine_on = True
 
 menu = Menu()
-coffee_maker = CoffeeMaker()
+coffe_maker = CoffeeMaker()
 money_machine = MoneyMachine()
 
-while coffee_machine_on:
-    options = menu.get_items()
-    choice = input(f"What would you like? ({options}): ")
-    if choice == "off":
-        coffee_machine_on = False
-    elif choice == "report":
-        coffee_maker.report()
+while coffe_machine_on:
+    coffee_choices = menu.get_items()
+    choices = input(f"What would you like? ({coffee_choices}) :")
+    if choices == "off":
+        coffe_machine_on = False
+    elif choices == "report":
+        coffe_maker.report()
         money_machine.report()
     else:
-        drink = menu.find_drink(choice)
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
-            coffee_maker.make_coffee(drink)
+        drink = menu.find_drink(choices)
+        if coffe_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+            coffe_maker.make_coffee(drink)
