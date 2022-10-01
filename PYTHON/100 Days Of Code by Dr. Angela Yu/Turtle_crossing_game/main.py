@@ -8,13 +8,26 @@ from scoreboard import Scoreboard
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.title("The Turtle Crossing")
 
 
-while True:
-    time.sleep(0.1)
-    screen.update()
+player = Player()
+scoreboard = Scoreboard()
 
 
+
+screen.onkey(player.move_up, "Up")
 screen.listen()
 
+game_is_on = True
+while game_is_on:
+    time.sleep(0.1)
+    player.finish_line()
+    scoreboard.update_score()
+    screen.update()
+
 screen.exitonclick()
+
+
+
+
