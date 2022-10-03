@@ -1,4 +1,4 @@
-from turtle import Screen
+from turtle import Screen, xcor
 import time
 from player import Player
 from car_manager import CarManager
@@ -15,16 +15,18 @@ player = Player()
 scoreboard = Scoreboard()
 
 
-
-screen.onkey(player.move_up, "Up")
 screen.listen()
+screen.onkey(player.move_up, "Up")
+
 
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     player.finish_line()
-    scoreboard.update_score()
     screen.update()
+    
+if player.ycor() > 280:
+    scoreboard.score_update()
 
 screen.exitonclick()
 

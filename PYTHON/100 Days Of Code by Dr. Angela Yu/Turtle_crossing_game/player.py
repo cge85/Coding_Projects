@@ -1,9 +1,8 @@
 from turtle import Turtle
-from scoreboard import Scoreboard
 
 
 STARTING_POSITION = (0, -280)
-MOVE_DISTANCE = 10
+MOVE_DISTANCE = 50
 FINISH_LINE_Y = 280
 
 class Player(Turtle):

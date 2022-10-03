@@ -1,18 +1,20 @@
 from turtle import Turtle
 
-
 FONT = ("Courier", 24, "normal")
-SCORE = 0
 
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
-        self.goto(-280, 260)
-        self.write(f"Level: {SCORE}", align="left", font=(FONT))
+        self.score = 0
         self.hideturtle()
-        self.update_score()
+        self.score_update()
 
-
-    def update_score(self):
-        ...
+    def score_update(self):
+        self.clear()
+        self.goto(-280, 260)
+        self.write(f"Level: {self.score}", align="left", font=(FONT))
+    
+    def point(self):
+        self.score += 1
+        self.score_update()
