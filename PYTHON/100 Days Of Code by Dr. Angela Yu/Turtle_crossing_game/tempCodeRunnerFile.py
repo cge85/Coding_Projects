@@ -1,1 +1,2 @@
-T
+line()
+    scoreboard.sco

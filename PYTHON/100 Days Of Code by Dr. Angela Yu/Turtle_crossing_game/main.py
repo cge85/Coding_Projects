@@ -22,11 +22,13 @@ screen.onkey(player.move_up, "Up")
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
-    player.finish_line()
     screen.update()
-    
+    player.finish_line()
+
+
 if player.ycor() > 280:
-    scoreboard.score_update()
+    scoreboard.point()
+
 
 screen.exitonclick()
 

@@ -12,7 +12,7 @@ class Player(Turtle):
         self.penup()
         self.setheading(90)
         self.goto(STARTING_POSITION)
-
+        self.finish_line()
 
     def move_up(self):
         self.forward(MOVE_DISTANCE)
