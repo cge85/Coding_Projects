@@ -1,2 +1,2 @@
-line()
-    scoreboard.sco
+if player.ycor() > 280:
+#     scoreboard.point()
