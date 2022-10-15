@@ -15,4 +15,25 @@
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-print(data["temp"])
+# print(type(data))
+# print(data["temp"])
+
+# data_dict = data.to_dict()
+# # print(data_dict)
+
+# temp_list = data["temp"].to_list()
+# print(temp_list)
+
+# print(data["temp"].mean())
+
+# print(data["temp"].max())
+# print(data[data.day == "Monday"])
+# print(data[data.temp == data.temp.max()])
+# monday = data[data.day == "Monday"]
+# print((monday.temp * 1.8) + 32)
+
+# Create Dataframe from scratch
+data_dict = {
+    "students": ["Angela", "James", "Cliffton"],
+    "score"
+}
