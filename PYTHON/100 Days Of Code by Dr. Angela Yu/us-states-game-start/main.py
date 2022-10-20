@@ -26,7 +26,9 @@ while len(guessed_states) < 50:
         t.goto(int(data_state.x), int(data_state.y)) #type: ignore
         t.write(answer_state)
 
-    if all_states not in guessed_states:
-        states_to_learn = []
-        all_states.append(states_to_learn)
-        print(states_to_learn)
+for states in all_states:
+    if states not in guessed_states:
+        states_list = []
+        states_list.append(states)
+        states_to_learn = pandas.DataFrame()
+        states_to_learn.to_csv("states_to_learn.csv")
