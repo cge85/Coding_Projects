@@ -16,7 +16,11 @@ while len(guessed_states) < 50:
                             prompt="What's another state`s name?").title() # type: ignore
 
     if answer_state == "Exit":
+        states_list = [state for state in all_states if state not in guessed_states]
+        states_to_learn = pandas.DataFrame(states_list)
+        states_to_learn.to_csv("states_to_learn.csv", index=False)
         break
+
     if  answer_state in all_states:
         guessed_states.append(answer_state)
         t = turtle.Turtle()
@@ -26,9 +30,3 @@ while len(guessed_states) < 50:
         t.goto(int(data_state.x), int(data_state.y)) #type: ignore
         t.write(answer_state)
 
-states_list = []
-for states in all_states:
-    if states not in guessed_states:
-        states_list.append(states)
-        states_to_learn = pandas.DataFrame(states_list)
-        states_to_learn.to_csv("states_to_learn.csv", index=False)
