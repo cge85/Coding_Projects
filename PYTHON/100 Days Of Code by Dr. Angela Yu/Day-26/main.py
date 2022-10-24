@@ -1,4 +1,3 @@
-from multiprocessing import Value
 import random
 
 # numbers =[1, 2, 3]
@@ -77,7 +76,47 @@ import random
 # print(passed_students)
 
 # Dictionary Comprehension 1 Exercise
-sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
-result = {word:len(word) for word in sentence.split()}
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# result = {word:len(word) for word in sentence.split()}
 
-print(result)
+# print(result)
+
+# Dictionary Comprehension 2 Exercise
+# weather_c = {
+#     "Monday": 12,
+#     "Tuesday": 14,
+#     "Wednesday": 15,
+#     "Thursday": 14,
+#     "Friday": 21,
+#     "Saturday": 22,
+#     "Sunday": 24,
+# }
+
+# weather_f = {day:(temp_f * 9/5) + 32 for (day, temp_f) in weather_c.items() }
+
+# print(weather_f)
+
+# Looping through dictionaries:
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+
+# for (key, value) in student_dict.items():
+#     print(value)
+
+# How to iterate over a pandas DataFrame
+import pandas
+
+student_data_frame = pandas.DataFrame(student_dict)
+# print(student_data_frame)
+
+# Loop through a data frame
+# for (key, value) in student_data_frame.items():
+#     print(value)
+
+# Loop through rows of a data frame
+for (index, row) in student_data_frame.iterrows():
+    if row.student == "Angela":
+        print(row.score)
+    print(row.student, row.score)
