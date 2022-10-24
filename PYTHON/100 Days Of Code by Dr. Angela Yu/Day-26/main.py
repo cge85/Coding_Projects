@@ -1,3 +1,6 @@
+from multiprocessing import Value
+import random
+
 # numbers =[1, 2, 3]
 # new_list = []
 # for n in numbers:
@@ -33,19 +36,19 @@
 # print(result)
 
 # Show Data overlap numbers in file1 and file2
-with open("file1.txt") as file1:
-    read_file1 = file1.readlines()
-    file1 = []
-    for f1 in read_file1:
-        file1.append(f1.replace("\n", ""))
-with open("file2.txt") as file2:
-    read_file2 = file2.readlines()
-    file2 = []
-    for f2 in read_file2:
-        file2.append(f2.replace("\n", ""))
+# with open("file1.txt") as file1:
+#     read_file1 = file1.readlines()
+#     file1 = []
+#     for f1 in read_file1:
+#         file1.append(f1.replace("\n", ""))
+# with open("file2.txt") as file2:
+#     read_file2 = file2.readlines()
+#     file2 = []
+#     for f2 in read_file2:
+#         file2.append(f2.replace("\n", ""))
 
-result = [int(num) for num in file1 if num in file2]
-print(result)
+# result = [int(num) for num in file1 if num in file2]
+# print(result)
 
 # Angela code Will not get the correct results in VSC, but it will on replit
 # with open("file1.txt") as file1:
@@ -56,3 +59,25 @@ print(result)
 
 # result = [int(num) for num in file_1_data if num in file_2_data]
 # print(result)
+
+# Dictionary Comprehension using list
+# new_dict = {new_key:new_value for item in list}
+
+# Dictionary Comprehension using dictionary
+# new_dict = {new_key:new_value for (key,value) in dict.items()}
+
+# Conditional Dictionary Comprehension using dictionary
+# new_dict = {new_key:new_value for (key,value) in dict.items() if test}
+
+# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+# students_score = {student:random.randint(1, 100) for student in names}
+# print(students_score)
+
+# passed_students = {student:score for student, score in students_score.items() if score >= 60}
+# print(passed_students)
+
+# Dictionary Comprehension 1 Exercise
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+result = {word:len(word) for word in sentence.split()}
+
+print(result)
