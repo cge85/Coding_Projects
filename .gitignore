@@ -1,0 +1,12 @@
+#ignoring important files in the TestingAPI folder that I don`t want to share on github
+TestingAPI/node_modules
+TestingAPI/package*
+
+#ignoring important files in the PyAPItest folder that I don`t want to share on github
+PyAPItest/.venv
+
+#ignoring confedential information in env file
+.env
+
+#ignore my information file
+information.txt
